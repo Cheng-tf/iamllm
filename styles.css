@@ -267,7 +267,7 @@ section {
     color: var(--text-primary);
     background-color: var(--emphasis);
     padding: 20px 0;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     border-radius: 5px;
 }
 
