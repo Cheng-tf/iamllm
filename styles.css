@@ -267,7 +267,7 @@ section {
     color: var(--text-primary);
     background-color: var(--emphasis);
     padding: 20px 0;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     border-radius: 5px;
 }
 
@@ -290,7 +290,7 @@ main h2 {
 }
 
 main h2:first-of-type {
-    margin-top: 8px;
+    margin-top: 0;
 }
 
 .date {
@@ -557,5 +557,5 @@ footer p {
 
 /* Reduce top padding only inside main to tighten spacing before first h2 */
 main > .container {
-    padding-top: 8px;
+    padding-top: 0;
 }
