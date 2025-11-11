@@ -15,6 +15,7 @@
 <body>
     <header>
         <div class="container header-container">
+            <button id="theme-toggle" class="theme-toggle">🌛</button>
             <div class="profile-info">
                 <h1>Tengfei Cheng <span class="chinese-name"></span></h1>
                 <p class="subtitle"><b>🤖 Computer Science and Technology</b></p>
@@ -26,8 +27,8 @@
                 </div>
             </div>
             <div class="carousel-container">
-                <img src="images/photo1.png" class="carousel-image active" alt="Tengfei Cheng Photo 1">
-                <img src="images/photo2.jpg" class="carousel-image" alt="Tengfei Cheng Photo 2">
+                <img src="images/photo1.jpg" class="carousel-image active" alt="Tengfei Cheng Photo 1">
+                <img src="images/photo2.png" class="carousel-image" alt="Tengfei Cheng Photo 2">
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
@@ -46,6 +47,16 @@
             if (currentSlide < 0) currentSlide = slides.length - 1;
 
             slides[currentSlide].classList.add('active');
+        }
+
+        // theme toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark-theme');
+                const isDark = document.documentElement.classList.contains('dark-theme');
+                themeBtn.textContent = isDark ? '🌞' : '🌛';
+            });
         }
     </script>
     
@@ -132,7 +143,7 @@ Research at the University of Liverpool</h3>
 
   <div class="paper-item">
     <div class="paper-thumb-wrap">
-      <img src="images/photo5.png" alt="Paper 1 Thumbnail" class="paper-thumb" loading="lazy">
+      <img src="images/paper0-thumb.png" alt="Paper 1 Thumbnail" class="paper-thumb" loading="lazy">
     </div>
     <div class="paper-details">
       <p><b>Tengfei Cheng</b>, Yangdi Huang, Ling Xiao, and Yunxuan Dong<sup>†</sup>.<br>
@@ -156,7 +167,7 @@ Research at the University of Liverpool</h3>
 
   <div class="paper-item">
     <div class="paper-thumb-wrap">
-      <img src="images/paper3-thumb.png" alt="Paper 3 Thumbnail" class="paper-thumb" loading="lazy">
+      <img src="images/paper2-thumb.png" alt="Paper 3 Thumbnail" class="paper-thumb" loading="lazy">
     </div>
     <div class="paper-details">
       <p>Biao Wu, <b>Tengfei Cheng</b>, Meng Fang, and Ling Chen<sup>†</sup>.<br>
@@ -168,7 +179,7 @@ Research at the University of Liverpool</h3>
 
   <div class="paper-item">
     <div class="paper-thumb-wrap">
-      <img src="images/paper4-thumb.png" alt="Paper 4 Thumbnail" class="paper-thumb" loading="lazy">
+      <img src="images/paper3-thumb.png" alt="Paper 4 Thumbnail" class="paper-thumb" loading="lazy">
     </div>
     <div class="paper-details">
       <p>Jinchao Ge<sup>*</sup>, <b>Tengfei Cheng<sup>*</sup></b>, Biao Wu<sup>*</sup>, Zeyu Zhang<sup>*</sup>, Shiya Huang, Judith Bishop, Gillian Shepherd, Meng Fang, Ling Chen, and Yang Zhao<sup>†</sup>.<br>
