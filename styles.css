@@ -534,7 +534,7 @@ footer p {
 /* Dark theme overrides for Papers section */
 :root.dark-theme .paper-item {
     background: #2b2b2b;
-    color: #f4f2f2;
+    color: #ffffff;
 }
 
 :root.dark-theme .paper-item:hover {
@@ -558,4 +558,13 @@ footer p {
 /* Reduce top padding only inside main to tighten spacing before first h2 */
 main > .container {
     padding-top: 5;
+}
+
+/* Tighten spacing just above Education only */
+main > .container {
+    padding-top: 3px;
+}
+
+main h2:first-of-type {
+    margin-top: 3px;
 }
