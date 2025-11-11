@@ -534,7 +534,7 @@ footer p {
 /* Dark theme overrides for Papers section */
 :root.dark-theme .paper-item {
     background: #2b2b2b;
-    color: #f3f3f3;
+    color: #aea8a8;
 }
 
 :root.dark-theme .paper-item:hover {
