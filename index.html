@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tengfei Cheng</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="profile-info">
+                <h1>Tengfei Cheng <span class="chinese-name">(程腾飞)</span></h1>
+                <p class="subtitle"><b>🤖 Computer Science and Technology</b></p>
+                <p><span class="icon">📞</span> Tel: (+86) 175-5708-6559</p>
+                <p><span class="icon">✉️</span> Email: <a href="mailto:2207310514@st.gxu.edu.cn">2207310514@st.gxu.edu.cn</a></p>
+                <div class="links">
+                    <a href="https://github.com/tengfei-cheng" target="_blank" class="button">🐱 GitHub</a>
+                                        <a href="files/resume2.pdf" target="_blank" class="button">📄 PDF Resume</a>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <img src="images/photo1.jpg" class="carousel-image active" alt="Tengfei Cheng Photo 1">
+                <img src="images/photo2.jpg" class="carousel-image" alt="Tengfei Cheng Photo 2">
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-image');
+            slides[currentSlide].classList.remove('active');
+
+            currentSlide += direction;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+    
+    <section class="intro">
+        <div class="container">
+            <p>
+               I am Tengfei Cheng, an undergraduate student in Computer Science at <a href="https://www.gxu.edu.cn/" target="_blank">Guangxi University</a> . 
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section>
+                <h2>🎓 Education</h2>
+                <div class="education-item">
+                    <div class="education-header">
+                        <div class="details">
+                            <h3>Guangxi University</h3>
+                            <p>Bachelor of Engineering in Computer Science and Technology (<a href="https://scei.gxu.edu.cn/">School of Computer and Electronics Information</a>)</p>
+                            <p class="date">09/2022 - 06/2026 (Expected)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+    <!-- Research Experience -->
+    <section>
+      <h2>🔬 Research Experience</h2>
+
+      <div class="experience-item">
+        <div class="details">
+          <h3>
+                            <img src="images/photo3.png" alt="photo3" class="logo">
+Research at Guangxi University
+</h3>
+          <p><b>Guangxi, China</b></p>
+          <p>Undergraduate Researcher -- Supervised by Prof. Yunxuan Dong.</p>
+          <p class="date">03/2024 -- 06/2025</p>
+        </div>
+        <div class="content">
+          <ul>
+            <li>Developed a deep learning framework, integrating wavelet-enhanced convolutional networks to capture multi-period patterns in tidal energy forecasting.</li>
+            <li>Authored a paper as the <b>first author</b>, which is under review in the journal <i>Knowledge-Based Systems</i> (KBS).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="details">
+          <h3>
+                            <img src="images/photo4.png" alt="photo4" class="logo">
+Research at the University of Liverpool</h3>
+          <p><b>Liverpool, UK</b></p>
+          <p>Research Intern -- Supervised by Prof. Meng Fang.</p>
+          <p class="date">06/2025 -- Present</p>
+        </div>
+        <div class="content">
+          <ul>
+            <li>Developed a 3D Doom-based benchmark to evaluate instruction-following agents, revealing multimodal LLMs' deficiencies in spatial reasoning and interactive decision-making.</li>
+            <li>Proposed GeoSafety-Bench, a benchmark quantifying multimodal LLMs' refusal robustness against synthetic images, uncovering critical geo-safety vulnerabilities and guiding safety-oriented model design.</li>
+            <li>Developed an evaluation-guided post-training framework to build the multimodal agent with the VaseVQA dataset (31,773 images), improving reasoning and compositional generalization in pottery attribution.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Papers -->
+    <section>
+      <h2>📚 Papers</h2>
+
+      <div class="papers-item">
+        <p><b>Tengfei Cheng</b>, Yangdi Huang, Ling Xiao, and Yunxuan Dong<sup>†</sup>.<br>
+        A Tidal Current Speed Forecasting Model Based on Multi-Periodicity Learning.<br>
+        <b>Under review at <i>Knowledge-Based Systems</i></b>.<br>
+        <a href="https://arxiv.org/abs/2410.09718" target="_blank">arXiv:2410.09718</a>.</p>
+      </div>
+
+      <div class="papers-item">
+        <p><b>Tengfei Cheng<sup>*</sup></b>, Biao Wu<sup>*</sup>, Ling Chen, and Meng Fang<sup>†</sup>.<br>
+        MDoom: A Benchmark for Evaluating Agentic Multimodal LLMs in Doom Environments.<br>
+        <b>Under review at <i>ACL Rolling Review</i></b>.<br>
+        Website: link.</p>
+      </div>
+
+      <div class="papers-item">
+        <p>Biao Wu, <b>Tengfei Cheng</b>, Meng Fang, and Ling Chen<sup>†</sup>.<br>
+        Can Large Vision&ndash;Language Models Refuse Synthetic Images in Geo-localization?<br>
+        <b>Under review at <i>ICLR 2026</i></b>.<br>
+        <a href="https://openreview.net/forum?id=1BGD0eRkik&referrer=%5Bthe%20profile%20of%20Tengfei%20Cheng%5D(%2Fprofile%3Fid%3D~Tengfei_Cheng1)" target="_blank">OpenReview</a>.</p>
+      </div>
+
+      <div class="papers-item">
+        <p>Jinchao Ge<sup>*</sup>, <b>Tengfei Cheng<sup>*</sup></b>, Biao Wu<sup>*</sup>, Zeyu Zhang<sup>*</sup>, Shiya Huang, Judith Bishop, Gillian Shepherd, Meng Fang, Ling Chen, and Yang Zhao<sup>†</sup>.<br>
+        VaseVQA: Multimodal Agent and Benchmark for Ancient Greek Pottery.<br>
+        <b>Under review at <i>ACL Rolling Review</i></b>.<br>
+        <a href="https://arxiv.org/abs/2509.17191" target="_blank">arXiv:2509.17191</a>.</p>
+      </div>
+
+      <p><sup>*</sup> Equal Contribution, <sup>†</sup> Corresponding Author.</p>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>💻 Projects</h2>
+
+      <div class="project-item">
+        <div class="details">
+          <h3>Enterprise Practical Training</h3>
+          <p class="date">10/2024 -- 11/2024</p>
+          <p>Leader</p>
+        </div>
+        <div class="content">
+          <ul>
+            <li>Led a team to develop a full-stack web application using the SpringBoot+Vue framework.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="details">
+          <h3>National Undergraduate Training Program for Innovation and Entrepreneurship</h3>
+          <p class="date">05/2024 -- 05/2025</p>
+          <p>Team Member</p>
+        </div>
+        <div class="content">
+          <ul>
+            <li>Implemented gesture recognition using computer vision techniques.</li>
+            <li>Secured provincial-level approval; received a <i>Good</i> rating at project completion.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section>
+      <h2>🏆 Awards</h2>
+      <ul class="awards-list">
+        <li>Mathematical Contest in Modeling (MCM), USA &mdash; Honorable Mention</li>
+        <li>Chinese Collegiate Computing Competition &mdash; First Prize</li>
+        <li>China Undergraduate Mathematical Contest in Modeling &mdash; Second Prize</li>
+        <li>National English Contest for College Students &mdash; Excellent Performance Award</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>🛠️ Skills</h2>
+      <ul class="skills-list">
+        <li><b>Programming</b>: Python (PyTorch), C/C++, LaTeX, Bash.</li>
+        <li><b>Tools</b>: VS Code Remote&ndash;SSH, PyCharm, Git/GitHub, Microsoft Office.</li>
+        <li><b>Soft Skills</b>: Research Writing, Teamwork, Critical Thinking, Problem Definition.</li>
+      </ul>
+    </section>
+
+    <!-- Extracurricular Activities -->
+    <section>
+      <h2>🤝 Extracurricular Activities</h2>
+
+      <div class="activity-item">
+        <div class="details">
+          <h3>Badminton</h3>
+        </div>
+        <div class="content">
+          <ul>
+            <li>5th place, Men's Singles, “Lotus Cup” Badminton Competition, Guangxi University.</li>
+            <li>1st place, Team Event, School of Computer and Electronic Information Badminton Competition.</li>
+            <li>Level-3 Certified Referee, Badminton Association of China.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="details">
+          <h3>College English Course</h3>
+          <p>Academic Representative</p>
+        </div>
+        <div class="content">
+          <ul>
+            <li>Facilitated teaching activities and supported classmates' academic needs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Siyuan Li. All rights reserved. All original content can be found in the <a href="https://github.com/liaoyanqing666/liaoyanqing666.github.io" target="_blank">website repository</a>.</p>
+
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="track-visitors.js"></script>
+</body>
+</html>
