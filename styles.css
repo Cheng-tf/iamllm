@@ -267,7 +267,7 @@ section {
     color: var(--text-primary);
     background-color: var(--emphasis);
     padding: 20px 0;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     border-radius: 5px;
 }
 
@@ -290,7 +290,7 @@ main h2 {
 }
 
 main h2:first-of-type {
-    margin-top: 40px;
+    margin-top: 8px;
 }
 
 .date {
@@ -553,4 +553,9 @@ footer p {
 :root.dark-theme .paper-thumb-wrap {
     background: #1e1e1e;
     border-color: #444;
+}
+
+/* Reduce top padding only inside main to tighten spacing before first h2 */
+main > .container {
+    padding-top: 8px;
 }
