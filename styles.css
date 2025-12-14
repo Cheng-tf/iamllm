@@ -100,7 +100,7 @@ section {
 }
 .paper-links {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
     margin-top: 6px;
   }
@@ -108,13 +108,10 @@ section {
   .paper-links a {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    text-decoration: none;
   }
   
-  .paper-links i.ai {
-    font-size: 1.1em;
-    line-height: 1;
+  .paper-links img {
+    height: 20px;  /* 统一高度，和别人的主页接近 */
   }
   
 .paper-item {
