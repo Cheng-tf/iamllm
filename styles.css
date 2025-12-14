@@ -98,6 +98,25 @@ section {
 .profile-info {
     flex: 1;
 }
+.paper-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+  
+  .paper-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+  }
+  
+  .paper-links i.ai {
+    font-size: 1.1em;
+    line-height: 1;
+  }
+  
 .paper-item {
   display: flex;
   align-items: flex-start;
