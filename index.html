@@ -1,310 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-    <title>Tengfei Cheng</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/site.webmanifest">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tengfei Cheng's academic homepage: multimodal learning, LLM and RL agents, publications, and research experience.">
+  <title>Tengfei Cheng</title>
+  <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <button id="theme-toggle" class="theme-toggle">🌛</button>
-            <div class="profile-info">
-                <h1>Tengfei Cheng <span class="chinese-name"></span></h1>
-                <p class="subtitle"><b>🤖 Computer Science and Technology</b></p>
-                <p><span class="icon">📞</span> Tel: (+86) 175-5708-6559</p>
-                <p><span class="icon">✉️</span> Email: <a href="mailto:2207310514@st.gxu.edu.cn">2207310514@st.gxu.edu.cn</a></p>
-                <div class="links">
-                    <a href="https://github.com/cheng-tf" target="_blank" class="button">🐱 GitHub</a>
-                                        <a href="files/resume.pdf" target="_blank" class="button">📄 PDF Resume</a>
-                </div>
-            </div>
-            <div class="carousel-container">
-                <img src="images/photo1.png" class="carousel-image active" alt="Tengfei Cheng Photo 1">
-                <img src="images/photo2.jpg" class="carousel-image" alt="Tengfei Cheng Photo 2">
-                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                <a class="next" onclick="changeSlide(1)">&#10095;</a>
-            </div>
-        </div>
-    </header>
-
-    <script>
-        let currentSlide = 0;
-
-        function changeSlide(direction) {
-            const slides = document.querySelectorAll('.carousel-image');
-            slides[currentSlide].classList.remove('active');
-
-            currentSlide += direction;
-            if (currentSlide >= slides.length) currentSlide = 0;
-            if (currentSlide < 0) currentSlide = slides.length - 1;
-
-            slides[currentSlide].classList.add('active');
-        }
-
-        // theme toggle
-        const themeBtn = document.getElementById('theme-toggle');
-        if (themeBtn) {
-            themeBtn.addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark-theme');
-                const isDark = document.documentElement.classList.contains('dark-theme');
-                themeBtn.textContent = isDark ? '🌞' : '🌛';
-            });
-        }
-    </script>
-    
-    <section class="intro">
-        <div class="container">
-<p>
-  Hi👋, I am <b>Tengfei Cheng </b>(/ˈtʌŋˌfeɪ/ /tʃʌŋ/), an undergraduate student majoring in Computer Science at 
-  <a href="https://www.gxu.edu.cn/" target="_blank">Guangxi University</a>. During my undergraduate studies, I conducted research under the supervision of 
-  <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=dYcYJfUAAAAJ" target="_blank">Prof. Yunxuan Dong</a>. I often gave thorough academic presentations — for instance,  <a href="files/timeseries.pdf" target="_blank">this presentation</a> left a strong impression on my advisor. After that, I was fortunate to be advised by <a href="https://mengfn.github.io/" target="_blank">Prof. Meng Fang</a> 
-  at the University of Liverpool, focusing on multimodal agents, which resulted in a first-author paper accepted at <b>Findings of EACL 2026</b>.
-</p>
-
-<p>
-  ⚡ My research interests include <b>multimodal representation learning</b> and 
-  <b>LLM- and RL-based agents</b>.
-</p>
-        </div>
-    </section>
-
-    <main>
-        <div class="container">
-
-<section>
-  <h2>🎉 News</h2>
-  <p>
-    Jan 4, 2026: One paper has been accepted at Findings of EACL 2026.
-  </p>
-</section>
-
-
-            <section>
-                <h2>🎓 Education</h2>
-                <div class="education-item">
-                    <div class="education-header">
-                        <div class="details">
-                            <h3>Guangxi University</h3>
-                            <p>Bachelor of Engineering in Computer Science and Technology </p>
-                            <p class="date">09/2022 - 06/2026 (Expected)</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-    <!-- Research Experience -->
-    <section>
-      <h2>🔬 Research Experience</h2>
-
-      <div class="experience-item">
-        <div class="details">
-          <h3>
-                            <img src="images/photo3.png" alt="photo3" class="logo">
-Research at Guangxi University
-</h3>
-          <p><b>Guangxi, China</b></p>
-          <p>Undergraduate Researcher -- Supervised by Prof. Yunxuan Dong.</p>
-          <p>Topic: Time Series Forecasting.</p>
-          <p class="date">03/2024 -- 06/2025</p>
-        </div>
-        <div class="content">
-          <ul>
-            <li>Developed a deep learning framework, integrating wavelet-enhanced convolutional networks to capture multi-period patterns in tidal energy forecasting.</li>
-          </ul>
-        </div>
+<a class="skip-link" href="#bio">Skip to content</a>
+<header class="site-header">
+  <div class="wrapper">
+    <nav class="site-nav" aria-label="Main navigation">
+      <button type="button" class="menu-icon" aria-label="Toggle navigation" aria-controls="navigation-links" aria-expanded="false">☰</button>
+      <div class="trigger" id="navigation-links">
+        <a class="page-link" href="#bio"><b>Biography</b></a>
+        <a class="page-link" href="#timeline"><b>Experiences</b></a>
+        <a class="page-link" href="#publications"><b>Publications</b></a>
+        <a class="page-link" href="https://github.com/Cheng-tf"><b>GitHub</b></a>
+        <a class="page-link" href="#projects"><b>Projects</b></a>
+        <a class="page-link" href="#awards"><b>Honors &amp; Awards</b></a>
       </div>
-
-      <div class="experience-item">
-        <div class="details">
-          <h3>
-                            <img src="images/photo4.png" alt="photo4" class="logo">
-Research at the University of Liverpool</h3>
-          <p><b>Liverpool, UK</b></p>
-          <p>Research Intern -- Supervised by Prof. Meng Fang.</p>
-          <p>Topic: Multimodal Agents.</p>
-          <p class="date">06/2025 -- Present</p>
-        </div>
-        <div class="content">
-          <ul>
-            <li>Developed a 3D Doom-based benchmark to evaluate instruction-following agents, revealing multimodal LLMs' deficiencies in spatial reasoning and decision-making.</li>
-            <li>Proposed GeoSafety-Bench, a benchmark quantifying multimodal LLMs' refusal robustness against synthetic images, uncovering critical geo-safety vulnerabilities and guiding safety-oriented model design.</li>
-            <li>Developed an evaluation-guided post-training framework to build a multimodal agent with the VaseVQA dataset (31,773 images), improving reasoning and compositional generalization in pottery attribution.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
- <!-- Papers -->
-<section>
-  <h2>📚 Papers</h2>
-  <p><sup>*</sup> Equal Contribution, <sup>†</sup> Corresponding Author.</p>
-
-  <div class="paper-item">
-    <div class="paper-thumb-wrap">
-      <img src="images/paper3-thumb.png" alt="Paper 4 Thumbnail" class="paper-thumb" loading="lazy">
+    </nav>
+  </div>
+</header>
+<div id="profile-cover" class="cover shallow-bg">
+  <div id="profile-namecard" class="profile-wrapper wrapper-light">
+    <div id="my-pic" class="profile-col profile-col-1">
+      <img id="profile-avatar" src="images/photo1.png" alt="Tengfei Cheng" class="circle-img border-dark" width="168" height="168">
     </div>
-    <div class="paper-details">
-      <p>
-        Jinchao Ge<sup>*</sup>, <b>Tengfei Cheng<sup>*</sup></b>, Biao Wu<sup>*</sup>, Zeyu Zhang<sup>*</sup>,
-        Shiya Huang, Judith Bishop, Gillian Shepherd, Meng Fang, Ling Chen,
-        and Yang Zhao<sup>†</sup>.<br>
-        VaseVQA: Multimodal Agent and Benchmark for Ancient Greek Pottery<br>
-        <b><i>EACL Findings </i> Poster</b>
-      </p>
-      <div class="paper-links">
-        <a href="https://arxiv.org/abs/2509.17191" target="_blank" rel="noopener">
-          <img
-            src="https://img.shields.io/badge/arXiv-2509.17191-b31b1b?style=flat-square&logo=arxiv"
-            alt="arXiv:2509.17191"
-            loading="lazy"
-          >
-        </a>
-      
-        <a href="https://github.com/AIGeeksGroup/VaseVQA" target="_blank" rel="noopener">
-          <img
-            src="https://img.shields.io/badge/GitHub-Code-1f883d?style=flat-square&logo=github"
-            alt="GitHub Code"
-            loading="lazy"
-          >
-        </a>
+    <div id="my-contact" class="profile-col profile-col-2">
+      <h1 id="my-name" class="text-grey-dark">Tengfei Cheng</h1>
+      <div id="my-title" class="text-grey">Guangxi University</div>
+      <div id="my-email" class="text-grey-light"><a href="mailto:2207310514@st.gxu.edu.cn">2207310514 [at] st.gxu.edu.cn</a></div>
+      <div class="social-media">
+        <a href="https://github.com/Cheng-tf" class="icon-button github" aria-label="GitHub"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 .8a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.5v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6A4.7 4.7 0 0 1 5.7 7c-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.6 1.7.2 3 .1 3.3a4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.8c0 .3.2.6.8.5A11.3 11.3 0 0 0 12 .8z"/></svg><span></span></a>
+        <a href="https://openreview.net/profile?id=~Tengfei_Cheng1" class="icon-button linkedin" aria-label="OpenReview"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 2h9l4 4v16H6zM14 2v6h5M9 12h7m-7 4h7"/></svg><span></span></a>
+        <a href="mailto:2207310514@st.gxu.edu.cn" class="icon-button linkedin" aria-label="Email"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 5 10 8L22 5"/></svg><span></span></a>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="paper-item">
-    <div class="paper-thumb-wrap">
-      <img src="images/paper1-thumb.png" alt="Paper 2 Thumbnail" class="paper-thumb" loading="lazy">
-    </div>
-    <div class="paper-details">
-      <p><b>Tengfei Cheng<sup>*</sup></b>, Biao Wu<sup>*</sup>, Ke Xu, Ling Chen, Joey Tianyi Zhou, and Meng Fang<sup>†</sup>.<br>
-      MDoom: A Benchmark for Evaluating Agentic Multimodal LLMs in Doom Environments<br>
-      <b>Under review at <i>ACL Rolling Review</i></b><br></p>
-    </div>
-  </div>
-
-
-  
-
-
-
-  <div class="paper-item">
-    <div class="paper-thumb-wrap">
-      <img src="images/paper0-thumb.png" alt="Paper 1 Thumbnail" class="paper-thumb" loading="lazy">
-    </div>
-    <div class="paper-details">
-      <p><b>Tengfei Cheng</b>, Yangdi Huang, Ling Xiao, and Yunxuan Dong<sup>†</sup>.<br>
-      A Tidal Current Speed Forecasting Model Based on Multi-Periodicity Learning<br>
-      <b>Under Review at <i>Engineering Applications of Artificial Intelligence
- (EAAI)</i></b><br>
-    </p>
-    <div class="paper-links">
-      <a href="https://arxiv.org/abs/2410.09718" target="_blank" rel="noopener">
-        <img
-          src="https://img.shields.io/badge/arXiv-2410.09718-b31b1b?style=flat-square&logo=arxiv"
-          alt="arXiv:2410.09718"
-          loading="lazy"
-        >
-      </a>
-    </div>
-    </div>
-  </div>
-
-
-
-</section>
-
-
-    <!-- Projects -->
-    <section>
-      <h2>💻 Projects</h2>
-
-      <div class="project-item">
-        <div class="details">
-          <h3>Enterprise Practical Training</h3>
-          <p class="date">10/2024 -- 11/2024</p>
-          <p>Leader</p>
-        </div>
-        <div class="content">
-          <ul>
-            <li>Led a team to develop a full-stack web application using the SpringBoot+Vue framework.</li>
-          </ul>
-        </div>
+<main class="page-content">
+<div class="wrapper">
+  <section id="bio" class="bio">
+    <h2 class="md-heading text-left"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M5 16c0-4 6-4 6 0m3-7h5m-5 4h5m-5 3h4"/></svg> About</h2>
+    <div class="bio-body">
+      <p>Hi, I am <b>Tengfei Cheng</b>. My academic background is in Computer Science and Technology at <a href="https://www.gxu.edu.cn/">Guangxi University</a>, where I conducted research on time series forecasting under the supervision of <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=dYcYJfUAAAAJ">Prof. Yunxuan Dong</a>. I have also worked with <a href="https://mengfn.github.io/">Prof. Meng Fang</a> at the University of Liverpool on multimodal agents, leading to a co-first-author paper accepted to <b>Findings of EACL 2026</b>.</p>
+      <p>From June to September 2026, I was a Research Assistant at <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>, advised by <b>Ying Wen</b> and <b>Yang Li</b>. My research interests include multimodal representation learning and LLM- and RL-based agents. Feel free to <a href="mailto:2207310514@st.gxu.edu.cn">email me</a> to discuss research and collaboration.</p>
+      <div class="bio-columns">
+        <div><h3><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg> <strong>Interests</strong></h3><ul><li>Multimodal representation learning</li><li>LLM- and RL-based agents</li><li>Agentic audiovisual generation</li></ul></div>
+        <div><h3><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5zM5 10v7c5 4 9 4 14 0v-7m3-2v9"/></svg> <strong>Education</strong></h3><b>Guangxi University</b><ul><li>B.Eng. in Computer Science and Technology</li><li>Sep. 2022 – Jun. 2026 (Expected)</li></ul></div>
       </div>
+    </div>
+  </section>
 
-      <div class="project-item">
-        <div class="details">
-          <h3>National Undergraduate Training Program for Innovation and Entrepreneurship</h3>
-          <p class="date">05/2024 -- 05/2025</p>
-          <p>Team Member</p>
-        </div>
-        <div class="content">
-          <ul>
-            <li>Implemented gesture recognition using computer vision techniques.</li>
-            <li>Secured provincial-level approval and received a <i>Good</i> rating at project completion.</li>
-          </ul>
-        </div>
+  <section id="news" class="bio">
+    <h2 class="md-heading text-left"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m3 6 2 2 3-4m3 3h10M3 13l2 2 3-4m3 3h10M3 20l2 2 3-4m3 3h10"/></svg> News</h2>
+    <ul class="news-list">
+      <li><span class="news-date">[2026]</span> Our tidal current forecasting paper is published in <a href="https://doi.org/10.1016/j.epsr.2026.113398"><b>Electric Power Systems Research</b></a>.</li>
+      <li><span class="news-date">[Sep. 2026]</span> <a href="https://aclanthology.org/2026.aacl-long.163/">DramaAgent</a> accepted to <b>AACL-IJCNLP 2026 Main Conference</b>.</li>
+      <li><span class="news-date">[Jun. 2026]</span> Started a Research Assistant position at <b>Shanghai Jiao Tong University</b>.</li>
+      <li><span class="news-date">[Jan. 2026]</span> <a href="https://arxiv.org/abs/2509.17191">VaseVQA</a> accepted to <b>Findings of EACL 2026</b>.</li>
+    </ul>
+  </section>
+
+  <section id="timeline" class="timeline-brief">
+    <h2 class="md-heading text-left"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m3 6 2 2 3-4m3 3h10M3 13l2 2 3-4m3 3h10M3 20l2 2 3-4m3 3h10"/></svg> Experiences</h2>
+    <div class="timeline-body">
+      <div class="timeline-item">
+        <div class="timeline-date">Jun. 2026 – Sep. 2026</div>
+        <div class="timeline-title">Research Assistant @ <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a></div>
+        <div class="timeline-desc"><div class="timeline-host">Advisors: Ying Wen and Yang Li</div><p>Shanghai, China</p></div>
       </div>
-    </section>
-
-    <!-- Awards -->
-    <section>
-      <h2>🏆 Awards</h2>
-      <ul class="awards-list">
-        <li>Mathematical Contest in Modeling (MCM), USA &mdash; Honorable Mention</li>
-      </ul>
-    </section>
-
-    <!-- Skills -->
-    <section>
-      <h2>🛠️ Skills</h2>
-      <ul class="skills-list">
-        <li><b>Programming</b>: Python (PyTorch), C/C++, LaTeX, Bash.</li>
-        <li><b>Tools</b>: VS Code Remote&ndash;SSH, PyCharm, Git/GitHub, Microsoft Office.</li>
-        <li><b>Soft Skills</b>: Research Writing, Teamwork, Critical Thinking, Problem Definition.</li>
-      </ul>
-    </section>
-
-    <!-- Extracurricular Activities -->
-    <section>
-      <h2>🤝 Extracurricular Activities</h2>
-
-      <div class="activity-item">
-        <div class="details">
-          <h3>Badminton</h3>
-        </div>
-        <div class="content">
-          <ul>
-            <li>5th place, Men's Singles, “Lotus Cup” Badminton Competition, Guangxi University.</li>
-            <li>1st place, Team Event, School of Computer and Electronic Information Badminton Competition.</li>
-            <li>Level-3 Certified Referee, Badminton Association of China.</li>
-          </ul>
-        </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Jun. 2025 – Present</div>
+        <div class="timeline-title">Research Intern @ <a href="https://www.liverpool.ac.uk/">University of Liverpool</a></div>
+        <div class="timeline-desc"><div class="timeline-host">Advisor: <a href="https://mengfn.github.io/">Prof. Meng Fang</a></div><p>Multimodal agents: 3D Doom instruction following, GeoSafety-Bench, and evaluation-guided post-training for VaseVQA.</p></div>
       </div>
-    </section>
-  </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Mar. 2024 – Jun. 2025</div>
+        <div class="timeline-title">Undergraduate Researcher @ <a href="https://www.gxu.edu.cn/">Guangxi University</a></div>
+        <div class="timeline-desc"><div class="timeline-host">Advisor: <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=dYcYJfUAAAAJ">Prof. Yunxuan Dong</a></div><p>Time series forecasting: wavelet-enhanced convolutional networks for multi-periodicity learning in tidal current data.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" class="publications">
+    <h2 class="md-heading text-left"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 2h9l4 4v16H6zM14 2v6h5M9 12h7m-7 4h7"/></svg> Publications <span class="pub-filters" hidden>(<button type="button" class="custom-button" data-filter="published" aria-pressed="false">Published</button> / <button type="button" class="custom-button" data-filter="all" aria-pressed="true">Show All</button>)</span></h2>
+    <p class="contribution-note">* Equal contribution.</p>
+    <div class="pub-list"><article class="pub" data-published="true">
+      <div class="pub-left"><a href="https://arxiv.org/abs/2509.17191" aria-label="VaseVQA benchmark overview"><img class="intro-img frame" src="images/paper3-thumb.png" alt="VaseVQA benchmark overview" loading="lazy"></a></div>
+      <div class="pub-right">
+        <h3 class="title">VaseVQA: Multimodal Agent and Benchmark for Ancient Greek Pottery</h3>
+        <div class="authors">Jinchao Ge*, <b>Tengfei Cheng*</b>, Biao Wu*, Zeyu Zhang*, Shiya Huang, Judith Bishop, Gillian Shepherd, Meng Fang, Ling Chen, Yang Zhao</div>
+        <div class="publish"><span class="place">Findings of EACL 2026 · Poster</span></div>
+        <div class="tags">[<a class="tag" href="https://arxiv.org/abs/2509.17191">Paper</a>] [<a class="tag" href="https://github.com/AIGeeksGroup/VaseVQA">Code</a>]</div>
+
+      </div>
+    </article><article class="pub" data-published="true">
+      <div class="pub-left"><a href="https://doi.org/10.1016/j.epsr.2026.113398" aria-label="Tidal current forecasting framework"><img class="intro-img frame" src="images/paper0-thumb.png" alt="Tidal current forecasting framework" loading="lazy"></a></div>
+      <div class="pub-right">
+        <h3 class="title">A multi-periodicity learning model for tidal current speed forecasting</h3>
+        <div class="authors"><b>Tengfei Cheng</b>, Yangdi Huang, Ling Xiao, Yunxuan Dong</div>
+        <div class="publish"><span class="place">Electric Power Systems Research, 261, 113398, 2026</span></div>
+        <div class="tags">[<a class="tag" href="https://doi.org/10.1016/j.epsr.2026.113398">Paper</a>] [<a class="tag" href="https://arxiv.org/abs/2410.09718">arXiv</a>]</div>
+
+      </div>
+    </article><article class="pub" data-published="true">
+      <div class="pub-left"><a href="https://aclanthology.org/2026.aacl-long.163/" aria-label="DramaAgent Figure 2: main framework overview from the paper"><img class="intro-img frame" src="images/dramaagent-main.png" alt="DramaAgent Figure 2: main framework overview from the paper" loading="lazy"></a></div>
+      <div class="pub-right">
+        <h3 class="title">DramaAgent: Agentic Storytelling Video Generation</h3>
+        <div class="authors">Ting Huang*, Biao Wu*, Ronghao Chen*, Zeyu Zhang, <b>Tengfei Cheng</b>, Qizhen Lan, Huacan Wang, Hao Tang</div>
+        <div class="publish"><span class="place">AACL-IJCNLP 2026 · Main Conference</span></div>
+        <div class="tags">[<a class="tag" href="https://aclanthology.org/2026.aacl-long.163/">Paper</a>] [<a class="tag" href="https://aclanthology.org/2026.aacl-long.163.pdf">PDF</a>] [<a class="tag" href="https://aigeeksgroup.github.io/DramaAgent/">Project</a>] [<a class="tag" href="https://github.com/AIGeeksGroup/DramaAgent">Code</a>]</div>
+        <p class="paper-summary">Hierarchical story planning, persistent character conditioning, and reflection-guided repair for coherent long-form audiovisual generation.</p>
+      </div>
+    </article><article class="pub" data-published="false">
+      <div class="pub-left"><img class="intro-img frame" src="images/paper1-thumb.png" alt="MDoom multimodal agent benchmark overview" loading="lazy"></div>
+      <div class="pub-right">
+        <h3 class="title">MDoom: A Benchmark for Evaluating Agentic Multimodal LLMs in Doom Environments</h3>
+        <div class="authors"><b>Tengfei Cheng*</b>, Biao Wu*, Ke Xu, Ling Chen, Joey Tianyi Zhou, Meng Fang</div>
+        <div class="publish"><span class="place">Under review · ACL Rolling Review</span></div>
+        <div class="tags"></div>
+
+      </div>
+    </article></div>
+  </section>
+
+  <section id="projects" class="bio">
+    <h2 class="md-heading text-left"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m3 6 2 2 3-4m3 3h10M3 13l2 2 3-4m3 3h10M3 20l2 2 3-4m3 3h10"/></svg> Projects</h2>
+    <p><b>Enterprise Practical Training</b> · Team Lead · Oct. – Nov. 2024<br>Led a team to develop a full-stack web application with Spring Boot and Vue.</p>
+    <p><b>National Undergraduate Training Program for Innovation and Entrepreneurship</b> · May 2024 – May 2025<br>Implemented gesture recognition with computer vision. The project received provincial-level approval and a “Good” completion rating.</p>
+  </section>
+
+  <section id="awards" class="bio">
+    <h2 class="md-heading text-left"><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg> Honors &amp; Awards</h2>
+    <ul><li>Honorable Mention, Mathematical Contest in Modeling (MCM), USA.</li><li>5th place, Men’s Singles, Lotus Cup Badminton Competition, Guangxi University.</li></ul>
+  </section>
+</div>
 </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Siyuan Li. All rights reserved. All original content can be found in the <a href="https://github.com/liaoyanqing666/liaoyanqing666.github.io" target="_blank">website repository</a>.</p>
-
-        </div>
-    </footer>
-
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="track-visitors.js"></script>
+<footer class="site-footer">
+  <div class="wrapper"><div class="footer-col-wrapper">
+    <div class="footer-col footer-col-1"><ul class="contact-list"><li>Personal Email:</li><li><a href="mailto:2207310514@st.gxu.edu.cn">2207310514@st.gxu.edu.cn</a></li></ul></div>
+    <div class="footer-col footer-col-2"><a href="https://github.com/Cheng-tf/iamllm">Website source</a><br><a href="https://openreview.net/profile?id=~Tengfei_Cheng1">OpenReview</a></div>
+    <div class="footer-col footer-col-3"><p class="text">© 2026 Tengfei Cheng<br>Template adapted from <a href="https://github.com/Jun-CEN/Jun-CEN.github.io">Jun CEN</a>, originally styled by <a href="https://leoyuan.site/">Zeqing Yuan</a>.</p></div>
+  </div></div>
+</footer>
+<a href="#profile-cover" class="back-to-top" aria-label="Back to top">Top</a>
 </body>
 </html>
