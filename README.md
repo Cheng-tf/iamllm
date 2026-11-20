@@ -24,6 +24,8 @@ Publications appear in this order: VaseVQA; tidal current forecasting; DramaAgen
 
 ## GitHub Pages
 
+The homepage uses a `robots` meta tag with `noindex, nofollow, noimageindex` to request exclusion from search engines while keeping direct links accessible. This is not authentication or a guarantee of privacy. Search engines must recrawl the page to see this instruction; the public GitHub repository and separately hosted assets may still be discoverable. Do not add a robots.txt crawl block, because crawlers need to fetch the page to read `noindex`.
+
 To host this repository with GitHub Pages, select `main` and `/ (root)` in Settings → Pages if your account supports Pages for this repository. The expected project URL is `https://cheng-tf.github.io/iamllm/`. No custom domain is configured.
 
 ## Template attribution
