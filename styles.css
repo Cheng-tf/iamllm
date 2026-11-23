@@ -7,7 +7,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #0077b5; outline-offs
 .skip-link { position: absolute; top: -80px; padding: 10px; background: white; z-index: 10; }
 .skip-link:focus { top: 5px; }
 .section-icon { width: 22px; height: 22px; vertical-align: -3px; margin-right: 5px; }
-#profile-avatar { height: 168px; object-fit: cover; }
+#profile-avatar { height: 168px; object-fit: cover; object-position: center 25%; }
 #my-name { margin: 0; }
 #my-email { margin: 5px 0 10px; overflow-wrap: anywhere; }
 #my-email a { color: #292929; }
