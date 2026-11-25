@@ -1,6 +1,10 @@
 /* Small accessibility and responsive fixes on top of Jun CEN's original main.css. */
 html { scroll-behavior: smooth; scroll-padding-top: 20px; }
 body:after { content: none; }
+/* Explicit weights keep emphasis distinct from the template's light body text. */
+body { font-weight: 400; color: #414141; }
+b, strong { font-weight: 800; color: #111; }
+a > b, a > strong { color: inherit; }
 *, *:before, *:after { box-sizing: border-box; }
 [hidden] { display: none !important; }
 a:focus-visible, button:focus-visible { outline: 3px solid #0077b5; outline-offset: 4px; }
